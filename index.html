@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello World!</title>
-</head>
-<body>
-    <h1>Hello World!</h1>
-    <h3>
-        node: <script>document.write(process.versions.node)</script>,
-        chrome: <script>document.write(process.versions.chrome)</script>,
-        electron: <script>document.write(process.versions.electron)</script>,
-    </h3>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello World!</title>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+        <h3>
+            node: <script>document.write(process.versions.node)</script>,
+            chrome: <script>document.write(process.versions.chrome)</script>,
+            electron: <script>document.write(process.versions.electron)</script>,
+        </h3>
+    </body>
+    <script>
+        require('./renderer.js')
+    </script>
 </html>
