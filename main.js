@@ -1,14 +1,14 @@
 const {app, BrowserWindow} = require('electron')
+const path = require('path')
 
 let win
 
 function createWindow() {
     win = new BrowserWindow({width: 800, height: 600})
-    win.loadURL(`file://${__dirname}/index.html`)
+    const winPath = path.join('file://', __dirname, '/index.html')
+    win.loadURL(winPath)
     win.webContents.openDevTools()
-    win.on('closed', () => {
-        win = null
-    })
+    win.on('close', () => win = null)
 }
 
 app.on('ready', createWindow)
