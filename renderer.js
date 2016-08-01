@@ -52,3 +52,11 @@ processCrashBtn.addEventListener('click', function(event) {
     win.loadURL(`file://${__dirname}/windows/process-crash.html`)
     win.show()
 })
+
+const {ipcRenderer} = require('electron')
+console.log(ipcRenderer.sendSync('synchronous-message', 'ping')) // prints "pong"
+
+ipcRenderer.on('asynchronous-reply', (event, arg) => {
+  console.log(arg)
+})
+ipcRenderer.send('asynchronous-message', 'ping')
