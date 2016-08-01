@@ -11,8 +11,12 @@
             chrome: <script>document.write(process.versions.chrome)</script>,
             electron: <script>document.write(process.versions.electron)</script>
         </h3>
-        <button id="manage-window">Manage Window</button>
+        <button id="manage-window">Resize/Move Window</button>
         Window resize reply: <div id="manage-window-reply"></div>
+
+        <button id="frameless-window">Frameless Window</button>
+
+        <button id="process-crash">Process Crash Window</button>
     </body>
     <script>
         require('./renderer.js')
