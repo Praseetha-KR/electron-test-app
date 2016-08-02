@@ -1,12 +1,13 @@
 # electron-test-app
 Learning Electron ⚛
 
-Install electron globally:
+
+####Install electron globally:
 ```
 npm install -g electron-prebuilt
 ```
 
-Run the app:
+####Run the app:
 ```
 npm start
 ```
