@@ -4,6 +4,8 @@ const BrowserWindow = electron.BrowserWindow
 const Menu = electron.Menu
 const app = electron.app
 
+global.sharedObject = {prop1: process.argv}
+
 let win
 
 function createWindow() {
